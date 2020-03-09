@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="br">
+<head>
+    <title>Bolo Doce</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="conteiner">
+        <div class="nav-bar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="listaBolos.html">Bolos</span></a>
+            
+          </li>
+          <li><a class="link" href="">Entrar<span class="arrow-down"></span></a>
+            <ul class="dropdown">
+              <li><a href="cadastro.html"></i> Cadastro</a></li>
+              <li><a class="link" href=""></i> Login</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-mobile">
+        <div class="menu-icon"> <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+ 
+
+    
+    <br><br><br>
+    
+  <section>
+    <h1>Cadastro</h1>
+    <form class="needs-validation" name="f1" action="processa.php" method="POST" novalidate >
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label for="validationCustom01">Nome</label>
+          <input type="text" class="form-control" id="validationCustom01" placeholder="Nome"  name="nome" required autofocus>
+          <div class="valid-feedback">Tudo certo!</div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="validationCustom02">Email*</label>
+          <input type="text" class="form-control"  onblur="validacaoEmails(f1.email)" placeholder="nome@hotmail.com" name="email"  maxlength="50" required>
+          <div id="msgemail"></div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="validationCustom03">Cidade*</label>
+          <input type="text" class="form-control" id="validationCustom03" placeholder="Cidade" name="cidade" required>
+          <div class="invalid-feedback">Por favor, informe uma cidade válida.</div>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputEstado">Estado*</label>
+            <select id="inputEstado" class="form-control" name="estado">
+              <option>ACRE</option>
+              <option>ALAGOAS</option>
+              <option>AMAPÁ</option>
+              <option>AMAZONAS</option>
+              <option>BAHIA</option>
+              <option>CEARÁ</option>
+              <option>ESPÍTITO SANTO</option>
+              <option>GOIÁS</option>
+              <option>MARANHÃO</option>
+              <option>MATO GROSSO</option>
+              <option>MATO GROSSO DO SUL</option>
+              <option>MINAS GERAIS</option>
+              <option>PARÁ</option>
+              <option>PARAÍBA</option>
+              <option>PARANÁ</option>
+              <option>PERNAMBUCO</option>
+              <option>PIAUÍ</option>
+              <option>RIO DE JANEIRO</option>
+              <option>RIO GRANDE DO NORTE</option>
+              <option>RIO GRANDE DO SUL</option>
+              <option>RONDÔNIA</option>
+              <option>RORAIMA</option>
+              <option>SANTA CATARINA</option>
+              <option>SÃO PAULO</option>
+              <option>SERGIPE</option>
+              <option>TOCANTINS</option>
+            </select>
+          </div>
+        <div class="col-md-3 mb-3">
+          <label for="validationCustom05">CEP*</label>
+          <input type="text" class="form-control" id="validationCustom05" onblur="validaCEP()" maxlength="9" minlength="9" placeholder="CEP" name="cep" required onkeypress="mascara(this, '#####-###')" >
+          <div class="invalid-feedback">Por favor, informe um CEP válido.</div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+          <label for="validationCustom05">CEL*</label>
+          <input type="text" class="form-control" id="validationCustom05" maxlength="13" minlength="12" placeholder="11.78954.4321" name="cel" required onkeypress="mascara(this, '##-#####-####')" >
+          <div class="invalid-feedback">Por favor, informe um Numero válido.</div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+          <label for="validationCustom05">TEL</label>
+          <input type="text" class="form-control" id="validationCustom05" maxlength="12" minlength="12" placeholder="11.4488.8882" name="tel"  onkeypress="mascara(this, '##-####-####')">
+          <div class="invalid-feedback">Por favor, informe um Numero válido.</div>
+        </div>
+      </div>
+
+
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">Concordo com os termos e condições</label>
+            <div class="invalid-feedback">
+              Você deve concordar, antes de continuar.
+            </div>
+          </div>
+        </div>
+       <a href="cadastro.html"><button class="btn btn-primary" type="submit">Enviar</button></a> 
+        <button type="reset" value="Limpar" class="btn btn-primary">Resetar</button>
+      </form>
+      </div>
+  </section>
+  <script>
+  (function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Pega todos os formulários que nós queremos aplicar estilos de validação Bootstrap personalizados.
+    var forms = document.getElementsByClassName('needs-validation');
+    // Faz um loop neles e evita o envio
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+
+function mascara(t, mask){
+  var i = t.value.length;
+  var saida = mask.substring(1,0);
+  var texto = mask.substring(i)
+  if (texto.substring(0,1) != saida){
+    t.value += texto.substring(0,1);
+  }
+  
+}
+
+// Funçao para validar o email
+function validacaoEmails(field) {
+  usuario = field.value.substring(0, field.value.indexOf("@"));
+  dominio = field.value.substring(field.value.indexOf("@")+ 1, field.value.length);
+   
+  if ((usuario.length >=1) &&
+      (dominio.length >=3) && 
+      (usuario.search("@")==-1) && 
+      (dominio.search("@")==-1) &&
+      (usuario.search(" ")==-1) && 
+      (dominio.search(" ")==-1) &&
+      (dominio.search(".")!=-1) &&      
+      (dominio.indexOf(".") >=1)&& 
+      (dominio.lastIndexOf(".") < dominio.length - 1)) {
+  document.getElementById("msgemail").innerHTML="E-mail válido";
+  }
+  else{
+  document.getElementById("msgemail").innerHTML="<font color='red'>E-mail inválido </font>";
+}
+}
+function onlynumber(evt) {
+   var theEvent = evt || window.event;
+   var key = theEvent.keyCode || theEvent.which;
+   key = String.fromCharCode( key );
+   //var regex = /^[0-9.,]+$/;
+   var regex = /^[0-9.]+$/;
+   if( !regex.test(key) ) {
+      theEvent.returnValue = false;
+      if(theEvent.preventDefault) theEvent.preventDefault();
+   }
+}
+
+  </script>
+  
+  <footer>
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Copyright 2019</h1>
+          <p class="lead">Ricardo Carvalho/Vitor Duran - Facebook | Twitter</p>
+        </div>
+      </div>
+    </footer>   
+</body>
+</html>

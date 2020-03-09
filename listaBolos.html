@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lista de Bolos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+  <link rel="stylesheet" href="css/bolos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="conteiner">
+        <div class="nav-bar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="">Bolos<span class="arrow-down"></span></a>
+            <ul class="dropdown">
+              <li><a href="#brancos"> Bolos Brancos</a></li>
+              <li><a href="#chocolate"> Bolos de Chocolate</a></li>
+              <li><a href="#preco"> Preços</a></li>
+            </ul>
+          </li>
+          <li><a href="">Entrar<span class="arrow-down"></span></a>
+            <ul class="dropdown">
+              <li><a href="cadastro.html">Cadastro</a></li>
+              <li><a href="">Login</a></li>          
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-mobile">
+        <div class="menu-icon"> <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+      <h1 class="titulo">Venha conhecer nossos Bolos</h1>
+    <br><br>
+
+  <div class="card bg-primary text-white text-center p-3">
+    <blockquote class="blockquote mb-0">
+      <h1 id="brancos">Bolos brancos</h1>   
+    </blockquote>
+  </div>
+  
+  <div class="card-deck" >
+    <div class="card">
+      <img src="img/bolo-branco-galak.PNG" class="card-img-top" alt="Clique na imagem para saber os igredientes">
+      <div class="card-body">
+        <h5 class="card-title">Bolo feito com galak</h5>
+        <p class="card-text">Contém glúten e lactose. Alérgicos: contém farinha de trigo, leite e derivados e ovo.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>   
+      </div>
+    </div>
+    <div class="card">
+      <img src="img/bolo-branco-abacaxiLeite.PNG" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Abacaxi com Leite condensado</h5>
+        <p class="card-text">Contém glúten e lactose. Alérgicos: contém farinha de trigo, leite e derivados e ovo.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>      
+      </div>
+    </div>
+    <div class="card">
+      <img src="img/bolo-branco-capucino.PNG" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Cappucino</h5>
+        <p class="card-text">Contém glúten e lactose. Alérgicos: contém farinha de trigo, leite e derivados e ovo. Pode conter amendoim, amêndoa, castanha de caju, castanha do Pará e avelã.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card bg-primary text-white text-center p-3">
+    <blockquote class="blockquote mb-0">
+      <h1 id="chocolate">Bolos de Chocolate</h1>   
+    </blockquote>
+  </div>
+  <div class="card-deck">
+    <div class="card">
+      <img src="img/bolo-charge.PNG" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bolo feito com charge</h5>
+        <p class="card-text">Contém glúten e lactose. Alérgicos: contém farinha de trigo, leite e derivados, ovo, amendoim e castanha de caju.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="img/bolo-alpino.PNG" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Alpino</h5>
+        <p class="card-text">Contém glúten e lactose. Alérgicos: contém farinha de trigo, leite e derivados e ovo.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="img/bolo-chocolate-chocomoça.PNG" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Chocomoça</h5>
+        <p class="card-text">Contém glúten e lactose. Alérgicos: contém farinha de trigo, leite e derivados e ovo.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+                  
+  
+
+  <section id="preco">
+		
+		<form name="pedido" action="" method="POST">
+			<table>
+				<thead>
+					<tr>
+						<th>Sabor</th>
+						<th>Quantidade</th>
+						<th>Preço por uni.</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="item">
+						<td>Galak</td>
+						<td>
+							<a class="btn-decrementa">-</a>
+							<input max="9" class="quantidade" value="0" type="number" name="Galak">
+							<a class="btn-incrementa">+</a>
+						</td>
+						<td class="preco-item">12.00</td>
+					</tr>
+					<tr class="item">
+						<td>Abacaxi</td>
+						<td>
+							<a class="btn-decrementa">-</a>
+							<input max="9" class="quantidade" value="0" type="number" name="Abacaxi">
+							<a class="btn-incrementa">+</a>
+						</td>
+						<td class="preco-item">11.00</td>
+					</tr>
+					<tr class="item">
+						<td>Cappucino</td>
+						<td>
+							<a class="btn-decrementa">-</a>
+							<input max="9" class="quantidade" value="0" type="number" name="Cappucino">
+							<a class="btn-incrementa">+</a>
+						</td>
+						<td class="preco-item">14.00</td>
+					</tr>
+					<tr class="item">
+						<td>Charge</td>
+						<td>
+							<a class="btn-decrementa">-</a>
+							<input max="9" class="quantidade" value="0" type="number" name="Charge">
+							<a class="btn-incrementa">+</a>
+						</td>
+						<td class="preco-item">13.00</td>
+					</tr>
+					<tr class="item">
+						<td>Alpino</td>
+						<td>
+							<a class="btn-decrementa">-</a>
+							<input max="9" class="quantidade" value="0" type="number" name="Alpino">
+							<a class="btn-incrementa">+</a>
+						</td>
+						<td class="preco-item">14.00</td>
+					</tr>
+					<tr class="item">
+						<td>Chocomoça</td>
+						<td>
+							<a class="btn-decrementa">-</a>
+							<input max="9" class="quantidade" value="0" type="number" name="Chocomoça">
+							<a class="btn-incrementa">+</a>
+						</td>
+						<td class="preco-item">13.00</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="2">Total</td>
+						<td id="total">0</td>
+					</tr>
+				</tfoot>
+			</table>
+		
+		</form>
+	</section>
+
+  <footer>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Copyright 2019</h1>
+            <p class="lead">Ricardo Carvalho/Vitor Duran - Facebook | Twitter</p>
+        </div>
+    </div>
+    </footer>       
+  <script src="js/bolos.js"></script>
+   
+</body>
+</html>

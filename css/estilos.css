@@ -1,0 +1,25 @@
+header#cabecalho{
+    background-color: blue;
+ }
+ 
+ div#interface{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5px green;
+ }
+ footer{
+    margin-top: 10px;
+    margin-bottom: none;
+ }
+ footer p{
+    text-align: center;
+ }
+ h1{
+    text-align: center;
+    color: green;
+ }
+ .texto {
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+ }
